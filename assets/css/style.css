@@ -295,7 +295,6 @@ a.card:hover { border-color: var(--accent); transform: translateY(-2px); box-sha
 .area { padding: 56px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 80px; }
 .area:last-child { border-bottom: 0; }
 .area-head { display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; margin-bottom: 28px; }
-.area-head .num { font: 500 0.85rem var(--sans); color: var(--ink-faint); }
 .area-head p { color: var(--ink-soft); margin: 0; }
 @media (max-width: 800px) { .area-head { grid-template-columns: 1fr; gap: 8px; } }
 .pubs { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }

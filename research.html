@@ -60,13 +60,13 @@
     const render = (q = "") => {
       q = q.trim().toLowerCase();
       let total = 0;
-      host.innerHTML = areas.map((a, i) => {
+      host.innerHTML = areas.map((a) => {
         const pubs = [...a.pubs].sort((x, y) => y.year - x.year).filter((p) => !q || `${p.title} ${p.authors} ${p.venue} ${p.year}`.toLowerCase().includes(q));
         total += pubs.length;
         if (q && !pubs.length) return "";
         return `<section class="area" id="${a.id}">
           <div class="area-head">
-            <div><div class="num">0${i + 1} · ${a.pubs.length} selected publications</div><h2>${esc(a.title)}</h2></div>
+            <h2>${esc(a.title)}</h2>
             <p>${esc(a.blurb)}</p>
           </div>
           <ol class="pubs">${pubs.map(pubHTML).join("")}</ol>
