@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research · Jayaraman Research Group</title>
+  <meta name="description" content="Research areas and publications of the Jayaraman group: AhR signaling, diet and microbial metabolites, microfluidic models, and systemic metabolomics.">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23500000'/><text x='16' y='23' font-family='Georgia' font-size='20' fill='white' text-anchor='middle'>J</text></svg>">
+  <script src="assets/js/layout.js" defer></script>
+  <script src="assets/js/publications.js" defer></script>
+</head>
+<body>
+<main>
+  <header class="page-head">
+    <div class="container">
+      <span class="eyebrow">Research Areas</span>
+      <h1>Research &amp; publications</h1>
+      <p class="lede">We combine microfluidics, molecular biology, cell culture, and computation to understand how microbes communicate: with each other, with their host, and with the materials around them. Below are selected publications in each area. The complete list is on <a href="https://scholar.google.com/citations?user=2yRyNp0AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+      <nav class="area-nav" id="area-nav" aria-label="Research areas"></nav>
+      <div style="margin-top:20px">
+        <label class="muted" for="pub-search" style="display:block;font-size:0.85rem;margin-bottom:6px">Search publications</label>
+        <input class="search" id="pub-search" type="search" placeholder="Title, author, journal, or year…">
+      </div>
+    </div>
+  </header>
+
+  <div class="container" id="areas"></div>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const areas = window.RESEARCH_AREAS;
+    const nav = document.getElementById("area-nav");
+    const host = document.getElementById("areas");
+    const search = document.getElementById("pub-search");
+
+    nav.innerHTML = areas.map((a) => `<a class="chip" href="#${a.id}">${esc(a.title)}</a>`).join("");
+
+    const pubHTML = (p) => {
+      const href = p.doi
+        ? `https://doi.org/${encodeURIComponent(p.doi)}`
+        : `https://scholar.google.com/scholar?q=${encodeURIComponent(p.title)}`;
+      const authors = esc(p.authors).replace(/Jayaraman, A\./g, "<b>Jayaraman, A.</b>");
+      return `<li class="pub">
+        <div class="year">${p.year}</div>
+        <div>
+          <a href="${href}" target="_blank" rel="noopener"><div class="title">${esc(p.title)}</div></a>
+          <div class="authors">${authors}</div>
+          <div class="venue">${esc(p.venue)}</div>
+        </div>
+      </li>`;
+    };
+
+    const render = (q = "") => {
+      q = q.trim().toLowerCase();
+      let total = 0;
+      host.innerHTML = areas.map((a, i) => {
+        const pubs = [...a.pubs].sort((x, y) => y.year - x.year).filter((p) => !q || `${p.title} ${p.authors} ${p.venue} ${p.year}`.toLowerCase().includes(q));
+        total += pubs.length;
+        if (q && !pubs.length) return "";
+        return `<section class="area" id="${a.id}">
+          <div class="area-head">
+            <div><div class="num">0${i + 1} · ${a.pubs.length} selected publications</div><h2>${esc(a.title)}</h2></div>
+            <p>${esc(a.blurb)}</p>
+          </div>
+          <ol class="pubs">${pubs.map(pubHTML).join("")}</ol>
+        </section>`;
+      }).join("") || `<p class="empty">No publications match “${esc(q)}”.</p>`;
+    };
+
+    render();
+    search.addEventListener("input", (e) => render(e.target.value));
+    // Sections render after load, so jump to #area links once they exist
+    if (location.hash) requestAnimationFrame(() =>
+      document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: "instant" }));
+  });
+</script>
+</body>
+</html>

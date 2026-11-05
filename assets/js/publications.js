@@ -1,0 +1,82 @@
+// Research areas and selected publications (grouped from Dr. Jayaraman's Google Scholar profile).
+// Add new papers to the matching area's `pubs`; each area is shown newest-first.
+// `doi` is optional; when present the title links to https://doi.org/<doi>,
+// otherwise it links to a Google Scholar search for the title.
+window.SCHOLAR_URL = "https://scholar.google.com/citations?user=2yRyNp0AAAAJ&hl=en";
+
+window.RESEARCH_AREAS = [
+  {
+    id: "signaling",
+    title: "Interkingdom Signaling & Bacterial Chemotaxis",
+    blurb: "Bacteria and their hosts exchange chemical signals. We study how microbial signals such as indole and AI-2, and host hormones such as norepinephrine, control bacterial chemotaxis, biofilm formation, and pathogen virulence, and how those same signals strengthen the intestinal barrier.",
+    pubs: [
+      { year: 2020, authors: "Yang, J., Chawla, R., Rhee, K. Y., Gupta, R., Manson, M. D., Jayaraman, A., et al.", title: "Biphasic chemotaxis of Escherichia coli to the microbiota metabolite indole", venue: "Proceedings of the National Academy of Sciences, 117(11), 6114–6120" },
+      { year: 2018, authors: "Kohli, N., Crisp, Z., Riordan, R., Li, M., Alaniz, R. C., & Jayaraman, A.", title: "The microbiota metabolite indole inhibits Salmonella virulence: involvement of the PhoPQ two-component system", venue: "PLoS One, 13(1), e0190613" },
+      { year: 2017, authors: "Jani, S., Seely, A. L., Peabody V, G. L., Jayaraman, A., & Manson, M. D.", title: "Chemotaxis to self-generated AI-2 promotes biofilm formation in Escherichia coli", venue: "Microbiology, 163(12), 1778–1790" },
+      { year: 2014, authors: "Pasupuleti, S., Sule, N., Cohn, W. B., MacKenzie, D. S., & Jayaraman, A.", title: "Chemotaxis of Escherichia coli to norepinephrine (NE) requires conversion of NE to 3,4-dihydroxymandelic acid", venue: "Journal of Bacteriology, 196, 3992–4000" },
+      { year: 2012, authors: "Hong, S. H., Hegde, M., Kim, J., Wang, X., Jayaraman, A., & Wood, T. K.", title: "Synthetic quorum-sensing circuit to control consortial biofilm formation and dispersal in a microfluidic device", venue: "Nature Communications, 3(1), 613" },
+      { year: 2011, authors: "Hegde, M., Englert, D. L., Schrock, S., Cohn, W. B., Vogt, C., Wood, T. K., et al.", title: "Chemotaxis to the quorum-sensing signal AI-2 requires the Tsr chemoreceptor and the periplasmic LsrB AI-2-binding protein", venue: "Journal of Bacteriology, 193(3), 768–773" },
+      { year: 2010, authors: "Bansal, T., Alaniz, R. C., Wood, T. K., & Jayaraman, A.", title: "The bacterial signal indole increases epithelial-cell tight-junction resistance and attenuates indicators of inflammation", venue: "Proceedings of the National Academy of Sciences, 107(1), 228–233" },
+      { year: 2009, authors: "Hegde, M., Wood, T. K., & Jayaraman, A.", title: "The neuroendocrine hormone norepinephrine increases Pseudomonas aeruginosa PA14 virulence through the las quorum-sensing pathway", venue: "Applied Microbiology and Biotechnology, 84(4), 763–776" },
+      { year: 2008, authors: "Jayaraman, A., & Wood, T. K.", title: "Bacterial quorum sensing: signals, circuits, and implications for biofilms and disease", venue: "Annual Review of Biomedical Engineering, 10(1), 145–167" },
+      { year: 2007, authors: "Bansal, T., Englert, D., Lee, J., Hegde, M., Wood, T. K., & Jayaraman, A.", title: "Differential effects of epinephrine, norepinephrine, and indole on Escherichia coli O157:H7 chemotaxis, colonization, and gene expression", venue: "Infection and Immunity, 75(9), 4597–4607" },
+      { year: 2007, authors: "Lee, J., Jayaraman, A., & Wood, T. K.", title: "Indole is an inter-species biofilm signal mediated by SdiA", venue: "BMC Microbiology, 7(1), 42" },
+    ],
+  },
+  {
+    id: "metabolites",
+    title: "Microbiota Metabolites & Host Health",
+    blurb: "Gut bacteria turn tryptophan, flavonoids, and other dietary compounds into bioactive metabolites, many of which act through the aryl hydrocarbon receptor (AhR). We identify these metabolites and study how they shape colon health and colorectal cancer, fatty liver disease, aging, and immune balance. We also engineer bacteria as anti-inflammatory therapies.",
+    pubs: [
+      { year: 2026, authors: "Jahan, I., Serrano Matos, Y. A., Jayaraman, A., & Joshi, A. D.", title: "Aryl hydrocarbon receptor nuclear translocator 2: a forgotten per-ARNT-Sim transcription factor", venue: "Toxicological Sciences, 209(7), kfag078" },
+      { year: 2025, authors: "Gülşan, E. E., Nowshad, F., Leigh, M. D., Crott, J. W., Park, H., Martin, G., Safe, S., Chapkin, R. S., Jayaraman, A., & Lee, K.", title: "A chalcone synthase-like bacterial protein catalyzes heterocyclic C-ring cleavage of naringenin to alter bioactivity against nuclear receptors in colonic epithelial cells", venue: "Metabolites, 15(3), 146" },
+      { year: 2022, authors: "Yang, Y., Osorio, D., Davidson, L. A., Han, H., Mullens, D. A., Jayaraman, A., Ivanov, I. V., Cai, J. J., & Chapkin, R. S.", title: "Single-cell RNA sequencing reveals how the aryl hydrocarbon receptor shapes cellular differentiation potency in the mouse colon", venue: "Cancer Prevention Research, 15(1), 17–28" },
+      { year: 2021, authors: "Han, H., Safe, S., Jayaraman, A., & Chapkin, R. S.", title: "Diet-host-microbiota interactions shape aryl hydrocarbon receptor ligand production to modulate intestinal homeostasis", venue: "Annual Review of Nutrition, 41(1), 455–478" },
+      { year: 2020, authors: "Han, H., Davidson, L. A., Fan, Y. Y., Goldsby, J. S., Yoon, G., Jin, U. H., Wright, G. A., et al.", title: "Loss of aryl hydrocarbon receptor potentiates FoxM1 signaling to enhance self-renewal of colonic stem and progenitor cells", venue: "The EMBO Journal, 39(19)" },
+      { year: 2020, authors: "Safe, S., Jin, U., Park, H., Chapkin, R. S., & Jayaraman, A.", title: "Aryl hydrocarbon receptor (AHR) ligands as selective AHR modulators (SAhRMs)", venue: "International Journal of Molecular Sciences, 21(18), 6654" },
+      { year: 2021, authors: "Safe, S., Jayaraman, A., Chapkin, R. S., Howard, M., Mohankumar, K., & Shrestha, R.", title: "Flavonoids: structure-function and mechanisms of action and opportunities for drug development", venue: "Toxicological Research, 37(2), 147–162" },
+      { year: 2018, authors: "Krishnan, S., Ding, Y., Saedi, N., Choi, M., Sridharan, G. V., Sherr, D. H., et al.", title: "Gut microbiota-derived tryptophan metabolites modulate inflammatory response in hepatocytes and macrophages", venue: "Cell Reports, 23(4), 1099–1111" },
+      { year: 2014, authors: "Jin, U. H., Lee, S. O., Sridharan, G., Lee, K., Davidson, L. A., Jayaraman, A., Chapkin, R. S., et al.", title: "Microbiome-derived tryptophan metabolites and their aryl hydrocarbon receptor-dependent agonist and antagonist activities", venue: "Molecular Pharmacology, 85, 777–788" },
+      { year: 2024, authors: "Ding, Y., Yanagi, K., Yang, F., Callaway, E., Cheng, C., Hensel, M. E., Menon, R., Alaniz, R. C., Lee, K., & Jayaraman, A.", title: "Oral supplementation of gut microbial metabolite indole-3-acetate alleviates diet-induced steatosis and inflammation in mice", venue: "eLife, 12, RP87458" },
+      { year: 2022, authors: "Das, J. K., Guo, F., Hunt, C., Steinmeyer, S., Plocica, J. A., Kobayashi, K. S., Ding, Y., et al.", title: "A metabolically engineered bacterium controls autoimmunity and inflammation by remodeling the pro-inflammatory microenvironment", venue: "Gut Microbes, 14(1), 2143222" },
+      { year: 2021, authors: "Wu, C., Muthyala, S., Klemashevich, C., Ufondu, A. U., Menon, R., Chen, Z., Jayaraman, A., & Sun, Y.", title: "Age-dependent remodeling of gut microbiome and host serum metabolome in mice", venue: "Aging, 13(5), 6330–6345" },
+      { year: 2019, authors: "Ding, Y., Yanagi, K., Cheng, C., Alaniz, R. C., Lee, K., & Jayaraman, A.", title: "Interactions between gut microbiota and non-alcoholic liver disease: the role of microbiota-derived metabolites", venue: "Pharmacological Research, 141, 521–529" },
+    ],
+  },
+  {
+    id: "models",
+    title: "Microfluidic & Computational Models",
+    blurb: "We build engineered models of host–microbe systems. Microfluidic platforms include living-cell arrays, droplet systems for culturing microbes, and gut- and tumor-on-a-chip co-cultures. Computational models range from mechanistic and hybrid machine-learning models of host signaling to predictions of microbial metabolism and statistical methods for microbiome data.",
+    pubs: [
+      { year: 2026, authors: "Han, J. J., Guzman, A. R., Zhou, A., Zhang, H., Gupte, R., Jung, H., Delgado, K., et al.", title: "Polychip: a high-throughput droplet microfluidics platform for interrogating microbial interactions", venue: "Advanced Science, e23854" },
+      { year: 2025, authors: "Penarete-Acosta, D., Mittal, M., Chakraborty, S., Han, A., & Jayaraman, A.", title: "Interplay between dietary fiber, macrophages and colonocytes in a microfluidic model of host-microbiota interactions in colorectal cancer", venue: "Lab on a Chip, 25(21), 5482–5496" },
+      { year: 2024, authors: "Penarete-Acosta, D., Stading, R., Emerson, L., Horn, M., Chakraborty, S., Han, A., & Jayaraman, A.", title: "A microfluidic co-culture model for investigating colonocytes-microbiota interactions in colorectal cancer", venue: "Lab on a Chip, 24(15), 3690–3703" },
+      { year: 2012, authors: "Kim, J., Taylor, D., Agrawal, N., Wang, H., Kim, H., Han, A., Rege, K., & Jayaraman, A.", title: "A programmable microfluidic cell array for combinatorial drug screening", venue: "Lab on a Chip, 12(10), 1813–1822" },
+      { year: 2012, authors: "Kim, J., Hegde, M., Kim, S. H., Wood, T. K., & Jayaraman, A.", title: "A microfluidic device for high throughput bacterial biofilm studies", venue: "Lab on a Chip, 12(6), 1157–1163" },
+      { year: 2010, authors: "Kim, J., Hegde, M., & Jayaraman, A.", title: "Co-culture of epithelial cells and bacteria for investigating host–pathogen interactions", venue: "Lab on a Chip, 10(1), 43–50" },
+      { year: 2010, authors: "Englert, D. L., Manson, M. D., & Jayaraman, A.", title: "Investigation of bacterial chemotaxis in flow-based microfluidic devices", venue: "Nature Protocols, 5(5), 864–872" },
+      { year: 2006, authors: "King, K. R., Wang, S., Irimia, D., Jayaraman, A., Toner, M., & Yarmush, M. L.", title: "A high-throughput microfluidic real-time gene expression living cell array", venue: "Lab on a Chip, 7(1), 77–85" },
+      { year: 2026, authors: "Zhang, S., Ok, S., Jayaraman, A., Landrock, K., Ivanov, I., Chapkin, R. S., & Ni, Y.", title: "Bayesian nonparametric longitudinal factor model for microbiome counts", venue: "arXiv:2610.21224" },
+      { year: 2020, authors: "Lee, D., Jayaraman, A., & Kwon, J. S.", title: "Development of a hybrid model for a partially known intracellular signaling pathway through correction term estimation and neural network modeling", venue: "PLoS Computational Biology, 16(12), e1008472" },
+      { year: 2020, authors: "Park, S. Y., Ufondu, A., Lee, K., & Jayaraman, A.", title: "Emerging computational tools and models for studying gut microbiota composition and function", venue: "Current Opinion in Biotechnology, 66, 301–311" },
+      { year: 2014, authors: "Sridharan, G. V., Choi, K., Klemashevich, C., Wu, C., Prabakaran, D., Pan, L. B., et al.", title: "Prediction and quantification of bioactive microbiota metabolites in the mouse gut", venue: "Nature Communications, 5, 5492" },
+      { year: 2006, authors: "Singh, A., Jayaraman, A., & Hahn, J.", title: "Modeling regulatory mechanisms in IL-6 signal transduction in hepatocytes", venue: "Biotechnology and Bioengineering, 95(5), 850–862" },
+    ],
+  },
+  {
+    id: "corrosion",
+    title: "Microbial Corrosion & Antimicrobial Materials",
+    blurb: "Biofilms can damage infrastructure or protect it. Since his doctoral work on corrosion-inhibiting biofilms, Dr. Jayaraman has studied microbiologically influenced corrosion (MIC). Today the lab combines multi-omics with microfluidic MIC models, bio-derived protective materials, and antimicrobial coatings and peptides.",
+    pubs: [
+      { year: 2026, authors: "Zhou, A., Li, Y., Zhang, H., Callaway, E., Han, S. I., Lee, J. S., Lee, K., Jayaraman, A., et al.", title: "DURABLE: a workflow for determining corrosion-driving and protective microbial mechanisms", venue: "Environmental Science & Technology, 60(33), 23319–23332" },
+      { year: 2026, authors: "Kafle, S. R., Mukunth, A., Han, A., Jayaraman, A., & Aristidou, A.", title: "Biosynthesis of cyanophycin by high-cell-density cultivation of recombinant Escherichia coli for corrosion-resistant biomaterial applications", venue: "Bioprocess and Biosystems Engineering, 49(10), 2777–2791" },
+      { year: 2024, authors: "Goldsberry, R., Martin, U., Bond, B., Callaway, E., Castaneda, H., & Jayaraman, A.", title: "Applicability of microcapillary electrochemical droplet cell for monitoring microbiologically induced corrosion", venue: "Electrochemistry Communications, 168, 107822" },
+      { year: 2024, authors: "Kotu, S. P., Yang, F., Klemashevich, C., Mannan, M. S., & Jayaraman, A.", title: "Metagenomic and metabolomic analysis of microbiologically influenced corrosion of carbon steel in produced water", venue: "Petroleum Microbiology, 96–119" },
+      { year: 2021, authors: "Albright, V., Penarete-Acosta, D., Stack, M., Zheng, J., Marin, A., Hlushko, H., et al.", title: "Polyphosphazenes enable durable, hemocompatible, highly efficient antibacterial coatings", venue: "Biomaterials, 268, 120586" },
+      { year: 2021, authors: "Lei, M., Jayaraman, A., Van Deventer, J. A., & Lee, K.", title: "Engineering selectively targeting antimicrobial peptides", venue: "Annual Review of Biomedical Engineering, 23(1), 339–357" },
+      { year: 2019, authors: "Kotu, S. P., Mannan, M. S., & Jayaraman, A.", title: "Emerging molecular techniques for studying microbial community composition and function in microbiologically influenced corrosion", venue: "International Biodeterioration & Biodegradation, 144, 104722" },
+      { year: 1999, authors: "Jayaraman, A., Mansfeld, F. B., & Wood, T. K.", title: "Inhibiting sulfate-reducing bacteria in biofilms by expressing the antimicrobial peptides indolicidin and bactenecin", venue: "Journal of Industrial Microbiology and Biotechnology, 22(3), 167–175" },
+      { year: 1997, authors: "Jayaraman, A., Earthman, J. C., & Wood, T. K.", title: "Corrosion inhibition by aerobic biofilms on SAE 1018 steel", venue: "Applied Microbiology and Biotechnology, 47(1), 62–68" },
+    ],
+  },
+];
