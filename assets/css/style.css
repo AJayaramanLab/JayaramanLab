@@ -18,44 +18,9 @@
   --shadow: 0 1px 2px rgb(31 26 23 / 0.04), 0 8px 24px rgb(31 26 23 / 0.06);
   --radius: 14px;
   --maxw: 1120px;
-  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --serif: "Lora", "Fraunces", Georgia, "Times New Roman", serif;
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #151212;
-    --bg-alt: #1c1817;
-    --surface: #221d1c;
-    --ink: #f1ebe6;
-    --ink-soft: #bdb2aa;
-    --ink-faint: #8d827b;
-    --line: #36302d;
-    --accent: #d98c8c;
-    --accent-hover: #e8a8a8;
-    --accent-soft: #3a2424;
-    --accent-ink: #1a0f0f;
-    --sage: #8fb39f;
-    --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.25);
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #151212;
-  --bg-alt: #1c1817;
-  --surface: #221d1c;
-  --ink: #f1ebe6;
-  --ink-soft: #bdb2aa;
-  --ink-faint: #8d827b;
-  --line: #36302d;
-  --accent: #d98c8c;
-  --accent-hover: #e8a8a8;
-  --accent-soft: #3a2424;
-  --accent-ink: #1a0f0f;
-  --sage: #8fb39f;
-  --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.25);
-  color-scheme: dark;
 }
 
 /* ---------- Base ---------- */
@@ -323,17 +288,6 @@ a.card:hover { border-color: var(--accent); transform: translateY(-2px); box-sha
 .news-item h3 { margin-bottom: 8px; }
 .news-item p { color: var(--ink-soft); margin: 0; }
 @media (max-width: 640px) { .news-item { grid-template-columns: 1fr; gap: 6px; } }
-
-/* ---------- CTA band ---------- */
-.cta-band {
-  background: var(--accent); color: var(--accent-ink); border-radius: 20px;
-  padding: 48px; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center;
-}
-.cta-band h2 { margin-bottom: 8px; }
-.cta-band p { margin: 0; opacity: 0.85; }
-.cta-band .btn { background: var(--accent-ink); color: var(--accent); }
-.cta-band .btn:hover { opacity: 0.9; }
-@media (max-width: 720px) { .cta-band { grid-template-columns: 1fr; padding: 32px 24px; } }
 
 /* ---------- Footer ---------- */
 .site-footer { border-top: 1px solid var(--line); padding: 48px 0 32px; font-size: 0.88rem; color: var(--ink-soft); margin-top: 0; }
